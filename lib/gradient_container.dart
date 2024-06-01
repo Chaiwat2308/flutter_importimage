@@ -28,7 +28,7 @@ class GradientContainer extends StatelessWidget {
               'assets/images/dice-1.png',
               width: 200,
             ),
-            StyledText(
+            const StyledText(
               text: 'ddd',
             ),
           ],

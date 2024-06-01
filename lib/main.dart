@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Material App Bar'),
         ),
-        body: GradientContainer(
+        body: const GradientContainer(
           color1: Color.fromARGB(255, 33, 5, 109),
           color2: Color.fromARGB(255, 68, 21, 149),
         ),
