@@ -1,26 +1,24 @@
 import 'package:flutter/material.dart';
-
-const startAligment = Alignment.topLeft;
-const endAligment = Alignment.bottomRight;
+import 'package:three_project/styled_text.dart';
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer(this.color1, this.color2, {super.key});
-
-  const GradientContainer.purple({super.key})
-      : color1 = Colors.deepPurple,
-        color2 = Colors.indigo;
+  const GradientContainer({
+    super.key,
+    required this.color1,
+    required this.color2,
+  });
 
   final Color color1;
   final Color color2;
 
   @override
-  Widget build(context) {
+  Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [color1, color2],
-          begin: startAligment,
-          end: endAligment,
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
       ),
       child: Center(
@@ -29,6 +27,9 @@ class GradientContainer extends StatelessWidget {
             Image.asset(
               'assets/images/dice-1.png',
               width: 200,
+            ),
+            const StyledText(
+              text: 'ddd',
             ),
           ],
         ),
